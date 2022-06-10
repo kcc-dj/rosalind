@@ -9,13 +9,13 @@ def fibd(n,m):
         return 1
     elif n==2:
         return 1
-    elif n<=l:
-        return fibd(n-1)+fibd(n-2)
+    elif n<=m:
+        return fibd(n-1,m)+fibd(n-2,m)
     else:
         a1=list()
-        for i in range(2,l+1):
-            a1.append(fibd(n-i))
+        for i in range(2,m+1):
+            a1.append(fibd(n-i,m))
         return sum(a1)
 
-k=fibd(n)
+k=fibd(n,m)
 print(k)
